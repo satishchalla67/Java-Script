@@ -1313,3 +1313,196 @@
 // if(date2>date1){
 //     console.log("Happy New Year!!");
 // }
+
+
+
+
+
+
+// closure = A function defined inside another function,
+//           the inner function has access to variables
+//           and scope of the outer function.
+//           Allow for private variables and state maintenance
+//           Used frequently in JS frameworks: React, Vue, Angular
+
+
+
+// function outer(){
+//     let message = "Hello!!";
+
+//     function inner(){
+//         console.log(message);
+//     }
+
+//     inner();
+// }
+
+// outer();
+
+
+
+//Counter Program
+
+// function outerCounter(){
+//     let count=0;
+//     function innerCount(){
+//         count++;
+//         console.log(`Count is increased to: ${count}`)
+//     }
+
+//     function getCount(){
+//         return count;
+//     }
+    
+//     return {innerCount, getCount};
+// }
+
+// const counter = outerCounter();
+
+// console.log(`Your current is count is: ${counter.getCount()}`);
+
+// counter.innerCount();
+// counter.innerCount();
+// counter.innerCount();
+// counter.innerCount();
+// counter.innerCount();
+// counter.innerCount();
+
+// console.log(`Your current is count is: ${counter.getCount()}`);
+
+
+//Program to keep track of points in a game using closures:
+
+
+// function play(){
+//     let score = 0;
+
+//     function win(){
+//         score++;
+//         console.log(`You won!! Your score increased to ${score}`);
+//     }
+
+//     function loose(){
+//         score--;
+//         console.log(`You lost!! Your score decreased to ${score}`);
+//     }
+
+//     function getScore(){
+//         return score;
+//     }
+
+//     return {win, loose, getScore};
+// }
+
+// let player1 = play();
+// let keepPlaying = true;
+
+// while(keepPlaying){
+//     let input = window.prompt(`Enter your input: `);
+
+//     if(input>10){
+//         player1.win();
+//     }
+//     else{
+//         player1.loose();
+//         keepPlaying = false;
+//     }
+
+//     console.log(`Your current score is: ${player1.getScore()}`);
+// }
+
+
+
+
+//Program to keep track of points in a game using closures:
+
+
+
+// function createScore(){
+//     let score = 0;
+//     function increaseScore(points){
+//         score+=points;
+//         console.log(`+${points}pts`)
+//     }
+
+//     function decreaseScore(points){
+//         score-=points;
+//         console.log(`-${points}pts`)
+//     }
+
+//     function getScore(){
+//         return score;
+//     }
+
+//     return {int: increaseScore, dec: decreaseScore, get: getScore};
+
+// }
+
+// const player1 = createScore();
+
+// player1.increaseScore(5);
+// player1.increaseScore(6);
+// player1.decreaseScore(3);
+
+// player1.int(5);
+// player1.dec(6);
+// player1.int(3);
+
+// console.log(`Your score is ${player1.get()}`);
+
+
+
+// setTimeOut = function in JavaScript that allows to schedule the execution
+//              of a function after an amount of time (milliseconds)
+//              Times are approximate (varies based on workload of the JavaScript runtime env.)
+
+//setTimeOut(callback, delay)
+//clearTimeOut(timeOutId) = can cancel a timeout before it triggers
+
+// let timeOutId1;
+// let timeOutId2;
+// let timeOutId3;
+
+// function startTimmer (){
+//     timeOutId1 = setTimeout(function sayHello(){
+//         console.log("Hello!!")
+//     }, 3000);
+//     timeOutId2 = setTimeout(function (){console.log("Hello 2!!")}, 4000);
+//     timeOutId3 = setTimeout(()=>console.log("Hello 3!!"), 5000);
+    
+// }
+
+// function stopTimmer(){
+//     clearTimeout(timeOutId1);
+//     clearTimeout(timeOutId2);
+//     clearTimeout(timeOutId3);
+// }
+
+
+
+
+// DIGITAL CLOCK PROGRAM
+
+// function updateTime (){
+//     const now = new Date();
+//     let hours = now.getHours();
+//     const minutes = now.getMinutes().toString().padStart(2, 0);
+//     const seconds = now.getSeconds().toString().padStart(2, 0);
+//     const meridian = hours>12 ? "PM" : "AM";
+//     hours = hours % 12 || 12;
+//     hours = hours.toString().padStart(2, 0);
+//     const timeString = `${hours}:${minutes}:${seconds} ${meridian}`;
+//     document.getElementById("clock").textContent = timeString;
+// }
+
+
+// updateTime();
+// setInterval(updateTime, 1000);
+
+
+
+
+
+
+
+
