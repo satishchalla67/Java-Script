@@ -1654,171 +1654,22 @@
 
 // CALCULATOR PROGRAM
 
-// const display = document.getElementById("display");
-
-
-// function appendToDisplay(input){
-//     display.value += input;
-// }
-
-// function clearDisplay(){
-//     display.value = "";
-// }
-
-// function calculate(){
-//     try{
-//         display.value = eval(display.value);
-//     }
-//     catch(error){
-//         display.value = "Error";
-//     }
-// }
-
-
-
-
-
-
-//DOM = DOCUMENT OBJECT MODEL
-//      object {} that represents the page you see in your web browser
-//      and provides with an api to interact with it.
-//      web browser constructs the DOM, when it loads an HTML document
-//      and structures all the elements in a tree like representation
-//      JavaScript can access the DOM to dynamically
-//      change the content, structure, and style of a web page.
-
-
-// document.title = "Hello Satish!";
-
-// document.body.style.backgroundColor = `hsl(0, 0%, 75%)`;
-
-// console.dir(document);
-
-// const username = "Satish Challa";
-
-// const heading = document.getElementById("myH1");
-
-// heading.textContent += username === "" ? " Guest" : ` ${username}`;
-
-
-
-//element selctors = methods used to target and manuplate html elements
-//                   they allow to select one or multiple html elements
-//                   from the DOM (Document Object Model)
-
-//1. document.getElementById()         // ELEMENT OR NULL
-//2. document.getElementsByClassName() // HTML COLLECTION
-//3. document.getElementsByTagName()   // HTML COLLECTION
-//4. document.querySelector()          // FIRST ELEMENT OR NULL
-//5. document.querySelectorAll()       // NODELIST
-
-//1. document.getElementById() 
-// const myHeading = document.getElementById("myHeading");
-// myHeading.style.backgroundColor = "yellow";
-// myHeading.style.textAlign = "center";
-
-
-// const fruits = document.getElementsByClassName("fruits");
-// Array.from(fruits).forEach((fruit)=>fruit.style.backgroundColor = "red");
-
-
-// let h4Elements = document.getElementsByTagName("h4");
-// let liElements = document.getElementsByTagName("li");
-
-// h4Elements = Array.from(h4Elements);
-// liElements = Array.from(liElements);
-
-// for(let h4Element of h4Elements){
-//     h4Element.style.backgroundColor = "yellow";
-// }
-// for(let liElement of liElements){
-//     liElement.style.backgroundColor = "red";
-// }
-
-
-
-
-// const element = document.querySelector("h4");
-
-// element.style.backgroundColor = "yellow";
-
-
-// const foods = document.querySelectorAll("li");
-
-// for(let food of foods){
-//     food.style.backgroundColor = "red";
-// }
-
-
-
-//DOM Navigation = the process of navigation through the structure
-//                 of an HTML document using JavaScript
-
-//.firstElementChild
-//.lastElementChild
-//.nextElementSibling
-//.previousElementSibling
-//.parentElement
-//.children
-
-//---------------.firstElementChild-------------------
-
-// const element = document.getElementById("fruits");
-// const firstChild = element.firstElementChild;
-// firstChild.style.backgroundColor = "yellow";
-
-
-// const ulElements = document.querySelectorAll("ul");
-
-// ulElements.forEach(element =>{
-//     const firstElement = element.firstElementChild;
-//     firstElement.style.backgroundColor = "lightGreen";
-// });
-
-//---------------.lastElementChild-------------------
-
-// const element = document.getElementById("fruits");
-// const lastChild = element.lastElementChild;
-// lastChild.style.backgroundColor = "yellow";
-
-// ulElements.forEach(element =>{
-//     const lastElement = element.lastElementChild;
-//     lastElement.style.backgroundColor = "lightPink";
-// });
-
-
-
-//---------------.nextElementSibling-------------------
-
-// const firstElement = document.getElementById("Orange");
-// const secondElement = firstElement.nextElementSibling;
-// secondElement.style.backgroundColor = "yellow";
-
-//---------------.previousElementSibling-------------------
-
-// const firstElement = document.getElementById("Orange");
-// const secondElement = firstElement.previousElementSibling;
-// secondElement.style.backgroundColor = "yellow";
-
-
-
-//---------------.parentElement-------------------
-
-// const element = document.getElementById("Apple");
-// const parent = element.parentElement;
-// parent.style.backgroundColor = "lightPink";
-
-// const parentSibling = parent.nextElementSibling;
-// parentSibling.style.backgroundColor = "lightGreen";
-
-
-//---------------.children-------------------
-const element = document.getElementById("fruits");
-const fruits = element.children;
-
-
-const fruitsArray = Array.from(fruits);
-
-fruitsArray.forEach(fruit => {
-    fruit.style.backgroundColor = "lightGreen";
-})
+const display = document.getElementById("display");
+
+
+function appendToDisplay(input){
+    display.value += input;
+}
+
+function clearDisplay(){
+    display.value = "";
+}
+
+function calculate(){
+    try{
+        display.value = eval(display.value);
+    }
+    catch(error){
+        display.value = "Error";
+    }
+}

@@ -1506,319 +1506,53 @@
 //STOPWATCH PROGRAM
 
 
-// const display = document.getElementById("display");
-// let timer = null;
-// let startTime = 0;
-// let elapsedTime = 0;
-// let isRunning = false;
-
-
-// function start(){
-
-//     if(!isRunning){
-//         startTime = Date.now() - elapsedTime;
-//         timer = setInterval(update, 10);
-//         isRunning = true;
-//     }
-
-// }
-// function stop(){
-
-//     if(isRunning){
-//         clearInterval(timer);
-//         elapsedTime = Date.now() - startTime;
-//         isRunning = false;
-//     }
-// }
-// function reset(){
-//     clearInterval(timer);
-//     startTime = 0;
-//     elapsedTime = 0;
-//     isRunning = false;
-//     display.textContent = `00:00:00:00`;
-// }
-
-// function update(){
-
-//     const currentTime = Date.now();
-//     elapsedTime = currentTime - startTime;
-
-//     let hours = Math.floor(elapsedTime / (1000*60*60));
-//     let minutes = Math.floor(elapsedTime/(1000*60)%60);
-//     let seconds = Math.floor(elapsedTime/1000%60);
-//     let milliseconds = Math.floor(elapsedTime%1000/10);
-
-
-//     hours = String(hours).padStart(2, "0");
-//     minutes = String(minutes).padStart(2, "0");
-//     seconds = String(seconds).padStart(2, "0");
-//     milliseconds = String(milliseconds).padStart(2, "0");
-
-//     display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
-// }
-
-
-
-
-
-// ES6 Module
-
-// import {PI, getArea, getCircumference, getVolume} from './mathUtil.js';
-
-
-// console.log(PI);
-
-// const area = getArea(3);
-// const circum = getCircumference(3);
-// const volume = getVolume(3);
-
-// console.log(area);
-// console.log(circum);
-// console.log(volume);
-
-
-//synchronous = Executes line by line consecutively in a sequential manner
-//              code that waits for an operation to complete
-
-//asynchronous = allows multiple operations to be performed concurrently.
-//               Doesnot block the execution flow and allows the program to continue
-//               (I/O operations, network requests, fetching data)
-//               Handled with: Callbacks, Promises, Async/Await
-
-
-//Asychronous using callback
-// function func1(callback){setTimeout(()=>{console.log("Task 1")
-//                                         callback();    
-// }, 3000);}
-
-
-// function func2(){
-//     console.log("Task 2");
-//     console.log("Task 3");
-//     console.log("Task 4");
-// }
-
-// func1(func2);
-
-
-
-
-
-//Error = An object that is created to represent a poblem that occurs
-//        often with user input or establishing a connection
-
-// try { }
-// catch { }
-// finally { }
-
-
-// try{
-//     console.log(x);
-    // NETWORK ERRORS
-    // PROMISE REJECTION
-    // SECURITY ERRORS
-// }
-// catch(error){
-//     console.error(error);
-// }
-// finally{
-    // CLOSE FILES
-    // CLOSE CONNECTIONS
-    // RELEASE RESOURCES
-//     console.log("This always executes!");
-// }
-
-// console.log("Hello you have reached end of the program!!");
-
-
-
-// try{
-//     const dividend = Number(window.prompt("Enter your dividend: "));
-//     const divisor = Number(window.prompt("Enter your divisor: "));
-
-
-//     if(divisor == 0){
-//         throw new Error("Dinominator cannot be a zero!!");
-//     }
-//     else if(isNaN(dividend) || isNaN(divisor)){
-//         throw new Error("Enter only digits not strings!");
-//     }
-
-//     const result = dividend/divisor;
-//     console.log(result);
-// }
-// catch(error){
-//     console.log(error);
-// }
-
-
-// CALCULATOR PROGRAM
-
-// const display = document.getElementById("display");
-
-
-// function appendToDisplay(input){
-//     display.value += input;
-// }
-
-// function clearDisplay(){
-//     display.value = "";
-// }
-
-// function calculate(){
-//     try{
-//         display.value = eval(display.value);
-//     }
-//     catch(error){
-//         display.value = "Error";
-//     }
-// }
-
-
-
-
-
-
-//DOM = DOCUMENT OBJECT MODEL
-//      object {} that represents the page you see in your web browser
-//      and provides with an api to interact with it.
-//      web browser constructs the DOM, when it loads an HTML document
-//      and structures all the elements in a tree like representation
-//      JavaScript can access the DOM to dynamically
-//      change the content, structure, and style of a web page.
-
-
-// document.title = "Hello Satish!";
-
-// document.body.style.backgroundColor = `hsl(0, 0%, 75%)`;
-
-// console.dir(document);
-
-// const username = "Satish Challa";
-
-// const heading = document.getElementById("myH1");
-
-// heading.textContent += username === "" ? " Guest" : ` ${username}`;
-
-
-
-//element selctors = methods used to target and manuplate html elements
-//                   they allow to select one or multiple html elements
-//                   from the DOM (Document Object Model)
-
-//1. document.getElementById()         // ELEMENT OR NULL
-//2. document.getElementsByClassName() // HTML COLLECTION
-//3. document.getElementsByTagName()   // HTML COLLECTION
-//4. document.querySelector()          // FIRST ELEMENT OR NULL
-//5. document.querySelectorAll()       // NODELIST
-
-//1. document.getElementById() 
-// const myHeading = document.getElementById("myHeading");
-// myHeading.style.backgroundColor = "yellow";
-// myHeading.style.textAlign = "center";
-
-
-// const fruits = document.getElementsByClassName("fruits");
-// Array.from(fruits).forEach((fruit)=>fruit.style.backgroundColor = "red");
-
-
-// let h4Elements = document.getElementsByTagName("h4");
-// let liElements = document.getElementsByTagName("li");
-
-// h4Elements = Array.from(h4Elements);
-// liElements = Array.from(liElements);
-
-// for(let h4Element of h4Elements){
-//     h4Element.style.backgroundColor = "yellow";
-// }
-// for(let liElement of liElements){
-//     liElement.style.backgroundColor = "red";
-// }
-
-
-
-
-// const element = document.querySelector("h4");
-
-// element.style.backgroundColor = "yellow";
-
-
-// const foods = document.querySelectorAll("li");
-
-// for(let food of foods){
-//     food.style.backgroundColor = "red";
-// }
-
-
-
-//DOM Navigation = the process of navigation through the structure
-//                 of an HTML document using JavaScript
-
-//.firstElementChild
-//.lastElementChild
-//.nextElementSibling
-//.previousElementSibling
-//.parentElement
-//.children
-
-//---------------.firstElementChild-------------------
-
-// const element = document.getElementById("fruits");
-// const firstChild = element.firstElementChild;
-// firstChild.style.backgroundColor = "yellow";
-
-
-// const ulElements = document.querySelectorAll("ul");
-
-// ulElements.forEach(element =>{
-//     const firstElement = element.firstElementChild;
-//     firstElement.style.backgroundColor = "lightGreen";
-// });
-
-//---------------.lastElementChild-------------------
-
-// const element = document.getElementById("fruits");
-// const lastChild = element.lastElementChild;
-// lastChild.style.backgroundColor = "yellow";
-
-// ulElements.forEach(element =>{
-//     const lastElement = element.lastElementChild;
-//     lastElement.style.backgroundColor = "lightPink";
-// });
-
-
-
-//---------------.nextElementSibling-------------------
-
-// const firstElement = document.getElementById("Orange");
-// const secondElement = firstElement.nextElementSibling;
-// secondElement.style.backgroundColor = "yellow";
-
-//---------------.previousElementSibling-------------------
-
-// const firstElement = document.getElementById("Orange");
-// const secondElement = firstElement.previousElementSibling;
-// secondElement.style.backgroundColor = "yellow";
-
-
-
-//---------------.parentElement-------------------
-
-// const element = document.getElementById("Apple");
-// const parent = element.parentElement;
-// parent.style.backgroundColor = "lightPink";
-
-// const parentSibling = parent.nextElementSibling;
-// parentSibling.style.backgroundColor = "lightGreen";
-
-
-//---------------.children-------------------
-const element = document.getElementById("fruits");
-const fruits = element.children;
-
-
-const fruitsArray = Array.from(fruits);
-
-fruitsArray.forEach(fruit => {
-    fruit.style.backgroundColor = "lightGreen";
-})
+const display = document.getElementById("display");
+let timer = null;
+let startTime = 0;
+let elapsedTime = 0;
+let isRunning = false;
+
+
+function start(){
+
+    if(!isRunning){
+        startTime = Date.now() - elapsedTime;
+        timer = setInterval(update, 10);
+        isRunning = true;
+    }
+
+}
+function stop(){
+
+    if(isRunning){
+        clearInterval(timer);
+        elapsedTime = Date.now() - startTime;
+        isRunning = false;
+    }
+}
+function reset(){
+    clearInterval(timer);
+    startTime = 0;
+    elapsedTime = 0;
+    isRunning = false;
+    display.textContent = `00:00:00:00`;
+}
+
+function update(){
+
+    const currentTime = Date.now();
+    elapsedTime = currentTime - startTime;
+
+    let hours = Math.floor(elapsedTime / (1000*60*60));
+    let minutes = Math.floor(elapsedTime/(1000*60)%60);
+    let seconds = Math.floor(elapsedTime/1000%60);
+    let milliseconds = Math.floor(elapsedTime%1000/10);
+
+
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0");
+    seconds = String(seconds).padStart(2, "0");
+    milliseconds = String(milliseconds).padStart(2, "0");
+
+    display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+}
